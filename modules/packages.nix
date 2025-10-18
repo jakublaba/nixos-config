@@ -28,16 +28,6 @@
     programs = {
         firefox.enable = true;
         zsh.enable = true;
-        git = {
-            enable = true;
-            config = {
-              user = {
-                name = "jakublaba";
-                email = "jakub.maciej.laba@gmail.com";
-              };
-              push.autosetupremote = true;
-            };
-        };
         steam.enable = true;
     };
 

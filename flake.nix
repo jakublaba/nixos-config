@@ -17,6 +17,7 @@
         ./modules/amdgpu.nix
         ./modules/audio.nix
         ./modules/boot.nix
+        ./modules/git.nix
         ./modules/gnome-extensions.nix
         ./modules/gnome.nix
         ./modules/locale.nix
