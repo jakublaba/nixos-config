@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./mx-master.nix
+  ];
+}
