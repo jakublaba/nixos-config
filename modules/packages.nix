@@ -10,6 +10,7 @@
       bat
       btop
       curl
+      discord
       eza
       fastfetch
       ghostty
