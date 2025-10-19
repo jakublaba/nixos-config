@@ -6,7 +6,7 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
-      let
+    let
       sharedModules = [
         /etc/nixos/hardware-configuration.nix
         ./modules/audio.nix
@@ -17,12 +17,12 @@
         ./modules/locale.nix
         ./modules/network.nix
         ./modules/nix-settings.nix
-        ./modules/oh-my-zsh.nix
         ./modules/packages.nix
         ./modules/plymouth.nix
         ./modules/services.nix
         ./modules/users.nix
         ./modules/xserver.nix
+        ./modules/zsh.nix
       ];
     in
   {
