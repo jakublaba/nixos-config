@@ -6,7 +6,6 @@
     isNormalUser = true;
     description = "kuba";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
     packages = with pkgs; [
       thunderbird
     ];

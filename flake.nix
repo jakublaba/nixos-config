@@ -18,6 +18,7 @@
         ./modules/locale.nix
         ./modules/network.nix
         ./modules/nix-settings.nix
+        ./modules/oh-my-zsh.nix
         ./modules/packages.nix
         ./modules/plymouth.nix
         ./modules/services.nix

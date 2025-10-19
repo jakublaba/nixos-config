@@ -28,7 +28,6 @@
     programs = {
       firefox.enable = true;
       steam.enable = true;
-      zsh.enable = true;
     };
 
     # Some programs need SUID wrappers, can be configured further or are
