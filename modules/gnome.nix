@@ -16,5 +16,6 @@
         adwaita-icon-theme
         gnome-themes-extra
         gnome-tweaks
+        nautilus
     ];
 }
