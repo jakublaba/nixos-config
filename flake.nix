@@ -32,6 +32,7 @@
         modules = [
           ./hosts/krb/boot.nix
           ./hosts/krb/video.nix
+          ./hosts/krb/virtualization.nix
         ] ++ sharedModules;
       };
 
