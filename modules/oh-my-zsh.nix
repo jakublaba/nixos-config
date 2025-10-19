@@ -23,6 +23,7 @@
       ls = "eza";
       cat = "bat";
       grep = "rg";
+      ff = "fastfetch";
     };
   };
 
