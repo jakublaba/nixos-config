@@ -27,6 +27,7 @@
 
     programs = {
       firefox.enable = true;
+      gamemode.enable = true;
       steam.enable = true;
     };
 

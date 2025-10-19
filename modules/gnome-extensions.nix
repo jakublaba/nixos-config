@@ -6,6 +6,7 @@
         appindicator
         blur-my-shell
         dock-from-dash
+        gamemode-shell-extension
         gnome-40-ui-improvements
         gsconnect
         space-bar
