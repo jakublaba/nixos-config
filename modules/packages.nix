@@ -14,7 +14,6 @@
       fastfetch
       ghostty
       gitui
-      goverlay
       mangohud
       mission-center
       ripgrep
