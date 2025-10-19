@@ -16,10 +16,8 @@
         gnome-tweaks
     ];
 
-    dconf.settings = {
-        "org/gnome/desktop/interface" = {
-            cursor-theme = "Adwaita";
-            cursor-size = 24;
-        };
+    environment.variables = {
+        XCURSOR_THEME = "Adwaita";
+        XCURSOR_SIZE = "24";
     };
 }

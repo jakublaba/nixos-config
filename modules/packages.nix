@@ -26,7 +26,6 @@
     ];
 
     programs = {
-      dconf.enable = true;
       firefox.enable = true;
       steam.enable = true;
       zsh.enable = true;
