@@ -18,6 +18,7 @@
       mangohud
       mission-center
       ripgrep
+      solaar
       thefuck
       tree
       vim
