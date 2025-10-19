@@ -1,18 +1,5 @@
 {
   "nodes": {
-    "etcNixos": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1760827975,
-        "narHash": "sha256-xUTMsajg2Mhq/wxprVCfXHrzTnxuNbsR4Upldm4FC3k=",
-        "path": "/etc/nixos",
-        "type": "path"
-      },
-      "original": {
-        "path": "/etc/nixos",
-        "type": "path"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1760580664,
@@ -31,7 +18,6 @@
     },
     "root": {
       "inputs": {
-        "etcNixos": "etcNixos",
         "nixpkgs": "nixpkgs"
       }
     }

@@ -1,25 +1,19 @@
 {
-  description = "deez";
+  description = "My NixOS config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    etcNixos = {
-      url = "path:/etc/nixos";
-      flake = false;
-    };
   };
 
-  outputs = { self, nixpkgs, etcNixos, ... }@inputs: {
-    # nixosConfiguration.<hostname> - remember to adjust
-    nixosConfigurations.krb = nixpkgs.lib.nixosSystem {
-      modules = [
-        "${etcNixos}/hardware-configuration.nix"
-        ./modules/amdgpu.nix
+  outputs = { self, nixpkgs, ... }@inputs:
+      let
+      sharedModules = [
         ./modules/audio.nix
         ./modules/boot.nix
         ./modules/git.nix
         ./modules/gnome-extensions.nix
         ./modules/gnome.nix
+        ./modules/graphics.nix
         ./modules/locale.nix
         ./modules/network.nix
         ./modules/nix-settings.nix
@@ -29,6 +23,24 @@
         ./modules/users.nix
         ./modules/xserver.nix
       ];
+    in
+  {
+    nixosConfigurations = {
+      krb = nixpkgs.lib.nixosSystem {
+        system = "x86_64_linux";
+        modules = [
+          # ./hosts/krb/hardware-configuration.nix
+          ./hosts/krb/video.nix
+        ] ++ sharedModules;
+      };
+
+      vm = nixpkgs.lib.nixosSystem {
+        system = "x86_64_linux";
+        modules = [
+          ./hosts/vm/hardware-configuration.nix
+          ./hosts/vm/video.nix
+        ] ++ sharedModules;
+      };
     };
   };
 }
