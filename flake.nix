@@ -31,6 +31,7 @@
       krb = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./hosts/krb/boot.nix
           ./hosts/krb/video.nix
         ] ++ sharedModules;
       };
@@ -38,6 +39,8 @@
       vm = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./hosts/vm/boot.nix
+          ./hosts/vm/clipboard-sharing.nix
           ./hosts/vm/video.nix
         ] ++ sharedModules;
       };
