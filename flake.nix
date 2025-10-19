@@ -8,6 +8,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
       let
       sharedModules = [
+        /etc/nixos/hardware-configuration.nix
         ./modules/audio.nix
         ./modules/boot.nix
         ./modules/git.nix
@@ -27,17 +28,15 @@
   {
     nixosConfigurations = {
       krb = nixpkgs.lib.nixosSystem {
-        system = "x86_64_linux";
+        system = "x86_64-linux";
         modules = [
-          # ./hosts/krb/hardware-configuration.nix
           ./hosts/krb/video.nix
         ] ++ sharedModules;
       };
 
       vm = nixpkgs.lib.nixosSystem {
-        system = "x86_64_linux";
+        system = "x86_64-linux";
         modules = [
-          ./hosts/vm/hardware-configuration.nix
           ./hosts/vm/video.nix
         ] ++ sharedModules;
       };
