@@ -16,7 +16,7 @@
   ];
 
   # Disk usage optimizations
-  boot.loader.grub.configurationLimit = 10;
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   nix.gc = {
     automatic = true;
