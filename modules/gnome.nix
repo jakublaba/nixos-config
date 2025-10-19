@@ -10,14 +10,11 @@
     services.gnome.core-apps.enable = false;
     environment.gnome.excludePackages = with pkgs; [ gnome-tour ];
 
+    # If coming from another DE, still need to set cursor theme
+    # gsettings set org.gnome.desktop.interface cursor-theme <cursor-theme>
     environment.systemPackages = with pkgs; [ 
         adwaita-icon-theme
         gnome-themes-extra
         gnome-tweaks
     ];
-
-    environment.variables = {
-        XCURSOR_THEME = "Adwaita";
-        XCURSOR_SIZE = "24";
-    };
 }
