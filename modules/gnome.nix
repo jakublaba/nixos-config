@@ -14,6 +14,7 @@
     # gsettings set org.gnome.desktop.interface cursor-theme <cursor-theme>
     environment.systemPackages = with pkgs; [ 
         adwaita-icon-theme
+        authenticator
         gnome-themes-extra
         gnome-tweaks
         nautilus
