@@ -7,6 +7,10 @@
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
 
+    interactiveShellInit = ''
+      eval $(thefuck --alias)
+    '';
+
     ohMyZsh = {
       enable = true;
       theme = "trapd00r";
