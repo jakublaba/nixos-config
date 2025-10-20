@@ -21,7 +21,6 @@
       nethogs
       pciutils
       ripgrep
-      thefuck
       tree
       vim
       vscode
