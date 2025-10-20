@@ -9,10 +9,13 @@
         gamemode-shell-extension
         gnome-40-ui-improvements
         gsconnect
+        removable-drive-menu
         solaar-extension
         space-bar
         upower-battery
         user-themes
-        removable-drive-menu
+        wayland-or-x11
+        weekly-commits
+        wifi-qrcode
     ];
 }
