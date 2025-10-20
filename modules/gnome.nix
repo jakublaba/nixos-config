@@ -15,6 +15,7 @@
     environment.systemPackages = with pkgs; [ 
         adwaita-icon-theme
         authenticator
+        evince
         gnome-calendar
         gnome-themes-extra
         gnome-tweaks
