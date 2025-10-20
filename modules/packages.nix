@@ -7,22 +7,28 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
+      amdgpu_top
       bat
       btop
       curl
       discord
       eza
       fastfetch
+      gtop
       ghostty
       gitui
+      iotop
       mangohud
       mission-center
+      nethogs
+      pciutils
       ripgrep
       thefuck
       tree
       vim
       vscode
       wget
+      wirelesstools
     ];
 
     programs = {

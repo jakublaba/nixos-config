@@ -2,8 +2,8 @@
 
 {
     environment.systemPackages = with pkgs.gnomeExtensions; [
-        user-themes
         appindicator
+        astra-monitor
         blur-my-shell
         dock-from-dash
         gamemode-shell-extension
@@ -11,7 +11,7 @@
         gsconnect
         space-bar
         upower-battery
-        vitals
+        user-themes
         removable-drive-menu
     ];
 }
