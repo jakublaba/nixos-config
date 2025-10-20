@@ -9,6 +9,7 @@
         gamemode-shell-extension
         gnome-40-ui-improvements
         gsconnect
+        solaar-extension
         space-bar
         upower-battery
         user-themes
