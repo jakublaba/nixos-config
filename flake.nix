@@ -31,6 +31,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/krb/boot.nix
+          ./hosts/krb/corectrl.nix
           ./hosts/krb/video.nix
           ./hosts/krb/virtualization.nix
         ] ++ sharedModules;
