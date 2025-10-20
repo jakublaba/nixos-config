@@ -13,6 +13,7 @@
       discord
       eza
       fastfetch
+      filezilla
       gtop
       ghostty
       gitui
