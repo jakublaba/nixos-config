@@ -7,7 +7,6 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-      amdgpu_top
       bat
       btop
       curl
@@ -19,7 +18,6 @@
       gitui
       iotop
       mangohud
-      mission-center
       nethogs
       pciutils
       ripgrep
