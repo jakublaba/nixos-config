@@ -22,6 +22,7 @@
     obsidian
     pciutils
     ripgrep
+    spotify
     tree
     vim
     vscode
