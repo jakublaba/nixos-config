@@ -9,14 +9,11 @@
     { self, nixpkgs, ... }@inputs:
     let
       sharedModules = [
-        ./modules/audio.nix
+        ./modules/core
         ./modules/git.nix
         ./modules/gnome-extensions.nix
         ./modules/gnome.nix
         ./modules/graphics.nix
-        ./modules/locale.nix
-        ./modules/network.nix
-        ./modules/nix-settings.nix
         ./modules/packages.nix
         ./modules/plymouth.nix
         ./modules/services.nix

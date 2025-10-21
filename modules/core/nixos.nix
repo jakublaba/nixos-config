@@ -14,9 +14,6 @@
     "flakes"
   ];
 
-  # Disk usage optimizations
-  boot.loader.systemd-boot.configurationLimit = 3;
-
   nix.gc = {
     automatic = true;
     dates = "weekly";

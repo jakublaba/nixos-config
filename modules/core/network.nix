@@ -1,7 +1,7 @@
 { ... }:
 {
   networking = {
-    hostName = "krb";
+    hostName = "pc";
 
     networkmanager.enable = true;
     # wireless.enable = true;
