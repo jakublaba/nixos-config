@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./apps.nix
     ./extensions.nix
@@ -11,5 +10,5 @@
   };
 
   services.gnome.core-apps.enable = false;
-  environment.gnome.excludePackages = [ pkgs.gnome-tour ];
+  environment.gnome.excludePackages = [pkgs.gnome-tour];
 }

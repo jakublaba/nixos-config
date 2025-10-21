@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   hardware.amdgpu.overdrive.enable = true;
 
-  environment.systemPackages = with pkgs; [ corectrl ];
+  environment.systemPackages = with pkgs; [corectrl];
 
   security.polkit.enable = true;
   security.polkit.extraConfig = ''

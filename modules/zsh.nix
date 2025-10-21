@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  environment.systemPackages = with pkgs; [ thefuck ];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [thefuck];
 
   programs.zsh = {
     enable = true;

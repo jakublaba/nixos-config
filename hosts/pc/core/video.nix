@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  services.xserver.videoDrivers = [ "amdgpu" ];
+{pkgs, ...}: {
+  boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu"];
 }
