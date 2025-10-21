@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs.gnomeExtensions; [
+        alphabetical-app-grid
         appindicator
         astra-monitor
         blur-my-shell
