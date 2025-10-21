@@ -12,7 +12,6 @@
         ./modules/core
         ./modules/gnome
         ./modules/git.nix
-        ./modules/graphics.nix
         ./modules/packages.nix
         ./modules/plymouth.nix
         ./modules/services.nix
