@@ -17,6 +17,7 @@
         authenticator
         evince
         gnome-calendar
+        gnome-console
         gnome-themes-extra
         gnome-tweaks
         nautilus
