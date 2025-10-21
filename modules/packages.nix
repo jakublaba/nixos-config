@@ -20,6 +20,7 @@
       iotop
       mangohud
       nethogs
+      nixfmt-rfc-style
       pciutils
       ripgrep
       tree
