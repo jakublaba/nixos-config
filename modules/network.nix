@@ -4,7 +4,7 @@
     hostName = "krb";
 
     networkmanager.enable = true;
-    wireless.enable = true;
+    # wireless.enable = true;
 
     # Configure network proxy if necessary
     # proxy = {

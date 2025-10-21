@@ -1,5 +1,5 @@
 {
-  description = "My NixOS config";
+  description = "NixOS config - jakublaba";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -9,7 +9,6 @@
     { self, nixpkgs, ... }@inputs:
     let
       sharedModules = [
-        /etc/nixos/hardware-configuration.nix
         ./modules/audio.nix
         ./modules/git.nix
         ./modules/gnome-extensions.nix
@@ -33,6 +32,7 @@
           modules = [
             ./hosts/krb/boot.nix
             ./hosts/krb/corectrl.nix
+            ./hosts/krb/hardware-configuration.nix
             ./hosts/krb/video.nix
             ./hosts/krb/virtualization.nix
           ]
@@ -44,6 +44,8 @@
           modules = [
             ./hosts/vm/boot.nix
             ./hosts/vm/clipboard-sharing.nix
+            # todo put vm hardware config in the repo
+            ./hosts/vm/hardware-configuration.nix
             ./hosts/vm/video.nix
           ]
           ++ sharedModules;
