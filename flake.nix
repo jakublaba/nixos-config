@@ -27,14 +27,14 @@
     in
     {
       nixosConfigurations = {
-        krb = nixpkgs.lib.nixosSystem {
+        pc = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/krb/boot.nix
-            ./hosts/krb/corectrl.nix
-            ./hosts/krb/hardware-configuration.nix
-            ./hosts/krb/video.nix
-            ./hosts/krb/virtualization.nix
+            ./hosts/pc/boot.nix
+            ./hosts/pc/corectrl.nix
+            ./hosts/pc/hardware-configuration.nix
+            ./hosts/pc/video.nix
+            ./hosts/pc/virtualization.nix
           ]
           ++ sharedModules;
         };
