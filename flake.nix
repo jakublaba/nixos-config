@@ -30,11 +30,9 @@
         pc = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/pc/boot.nix
-            ./hosts/pc/corectrl.nix
-            ./hosts/pc/hardware-configuration.nix
-            ./hosts/pc/video.nix
-            ./hosts/pc/virtualization.nix
+            ./hosts/pc/core
+            ./hosts/pc/overclocking
+            ./hosts/pc/virtualization
           ]
           ++ sharedModules;
         };
