@@ -19,6 +19,7 @@
     iotop
     mangohud
     nethogs
+    obsidian
     pciutils
     ripgrep
     tree
