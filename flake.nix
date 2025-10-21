@@ -10,9 +10,8 @@
     let
       sharedModules = [
         ./modules/core
+        ./modules/gnome
         ./modules/git.nix
-        ./modules/gnome-extensions.nix
-        ./modules/gnome.nix
         ./modules/graphics.nix
         ./modules/packages.nix
         ./modules/plymouth.nix
