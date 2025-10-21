@@ -1,5 +1,4 @@
 { ... }:
-
 {
   time.timeZone = "Europe/Warsaw";
 
@@ -22,7 +21,7 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-      layout = "pl";
-      variant = "";
+    layout = "pl";
+    variant = "";
   };
 }

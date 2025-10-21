@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   security.sudo.extraConfig = ''
     Defaults pwfeedback
@@ -9,7 +8,10 @@
   users.users.kuba = {
     isNormalUser = true;
     description = "kuba";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       thunderbird
     ];

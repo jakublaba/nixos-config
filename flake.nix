@@ -5,7 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs =
+    { self, nixpkgs, ... }@inputs:
     let
       sharedModules = [
         /etc/nixos/hardware-configuration.nix
@@ -25,27 +26,28 @@
         ./modules/zsh.nix
       ];
     in
-  {
-    nixosConfigurations = {
-      krb = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/krb/boot.nix
-          ./hosts/krb/corectrl.nix
-          ./hosts/krb/video.nix
-          ./hosts/krb/virtualization.nix
-        ] ++ sharedModules;
-      };
+    {
+      nixosConfigurations = {
+        krb = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/krb/boot.nix
+            ./hosts/krb/corectrl.nix
+            ./hosts/krb/video.nix
+            ./hosts/krb/virtualization.nix
+          ]
+          ++ sharedModules;
+        };
 
-      vm = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/vm/boot.nix
-          ./hosts/vm/clipboard-sharing.nix
-          ./hosts/vm/video.nix
-        ] ++ sharedModules;
+        vm = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/vm/boot.nix
+            ./hosts/vm/clipboard-sharing.nix
+            ./hosts/vm/video.nix
+          ]
+          ++ sharedModules;
+        };
       };
     };
-  };
 }
-

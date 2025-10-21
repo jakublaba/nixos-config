@@ -1,11 +1,10 @@
 { ... }:
-
 {
   networking = {
     hostName = "krb";
 
     networkmanager.enable = true;
-    # wireless.enable = true; # Enables wireless support via wpa_supplicant.
+    wireless.enable = true;
 
     # Configure network proxy if necessary
     # proxy = {
