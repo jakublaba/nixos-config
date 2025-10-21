@@ -39,14 +39,7 @@
 
         vm = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          modules = [
-            ./hosts/vm/boot.nix
-            ./hosts/vm/clipboard-sharing.nix
-            # todo put vm hardware config in the repo
-            ./hosts/vm/hardware-configuration.nix
-            ./hosts/vm/video.nix
-          ]
-          ++ sharedModules;
+          modules = [ ./hosts/vm/core ] ++ sharedModules;
         };
       };
     };
