@@ -17,10 +17,12 @@
     ghostty
     gitui
     iotop
+    jetbrains.pycharm-professional
     mangohud
     nethogs
     obsidian
     pciutils
+    python3
     ripgrep
     spotify
     tree
