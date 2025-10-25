@@ -4,6 +4,7 @@
     authenticator
     evince
     gnome-calendar
+    gnome-clocks
     gnome-console
     gnome-themes-extra
     gnome-tweaks
