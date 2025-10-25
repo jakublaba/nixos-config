@@ -24,7 +24,7 @@
     shellAliases = {
       cls = "clear";
       x = "exit";
-      ls = "eza";
+      ls = "eza --icons";
       cat = "bat";
       grep = "rg";
       ff = "fastfetch";
