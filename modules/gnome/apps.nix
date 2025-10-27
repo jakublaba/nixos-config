@@ -8,6 +8,7 @@
     gnome-console
     gnome-themes-extra
     gnome-tweaks
+    loupe
     nautilus
   ];
 }
