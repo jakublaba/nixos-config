@@ -10,5 +10,6 @@
     gnome-tweaks
     loupe
     nautilus
+    showtime
   ];
 }
