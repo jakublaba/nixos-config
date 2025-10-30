@@ -24,6 +24,7 @@
     pciutils
     python3
     ripgrep
+    solaar
     spotify
     tree
     vim
@@ -31,6 +32,10 @@
     wget
     wirelesstools
   ];
+
+  # todo figure out better organization
+  # needed for solaar
+  hardware.logitech.wireless.enable = true;
 
   programs = {
     firefox.enable = true;
