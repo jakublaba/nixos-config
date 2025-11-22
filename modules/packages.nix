@@ -17,6 +17,7 @@
     ghostty
     gitui
     iotop
+    jetbrains.idea-ultimate
     jetbrains.pycharm-professional
     mangohud
     nethogs
