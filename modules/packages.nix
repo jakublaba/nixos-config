@@ -17,7 +17,6 @@
     ghostty
     gitui
     iotop
-    jetbrains-toolbox
     mangohud
     nethogs
     obsidian
