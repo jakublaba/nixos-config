@@ -27,6 +27,7 @@
     solaar
     spotify
     tree
+    uv
     vim
     vscode
     wget
