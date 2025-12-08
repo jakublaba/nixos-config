@@ -1,15 +1,9 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [thefuck];
-
   programs.zsh = {
     enable = true;
 
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-
-    interactiveShellInit = ''
-      eval $(thefuck --alias)
-    '';
 
     ohMyZsh = {
       enable = true;
