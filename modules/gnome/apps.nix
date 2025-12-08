@@ -6,6 +6,7 @@
     gnome-calendar
     gnome-clocks
     gnome-console
+    gnome-text-editor
     gnome-themes-extra
     gnome-tweaks
     loupe
