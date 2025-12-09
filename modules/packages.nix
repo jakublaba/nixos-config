@@ -22,6 +22,7 @@
     nethogs
     obsidian
     pciutils
+    ppsspp
     python3
     ripgrep
     solaar
