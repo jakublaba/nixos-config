@@ -42,6 +42,11 @@
   programs = {
     firefox.enable = true;
     gamemode.enable = true;
+    gnupg.agent = {
+      enable = true;
+      # don't like that this is coupled with de, but well
+      pinentryPackage = pkgs.pinentry-gnome3;
+    };
     steam.enable = true;
   };
 
