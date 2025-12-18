@@ -16,11 +16,18 @@
 
     # Open ports in the firewall
     firewall = {
-      allowedTCPPorts = [443];
-      # allowedUDPPorts = [ ... ];
+      enable = true;
 
-      # Or disable the firewall altogether
-      # enable = false;
+      allowedTCPPorts = [
+        443
+        # upnp ports for ppsspp
+        1900
+        27312
+      ];
+      allowedUDPPorts = [
+        # upnp ports for ppsspp
+        27312
+      ];
     };
   };
 
