@@ -3,6 +3,7 @@
     adwaita-icon-theme
     authenticator
     evince
+    gnome-calculator
     gnome-calendar
     gnome-clocks
     gnome-console
