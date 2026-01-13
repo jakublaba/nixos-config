@@ -25,6 +25,7 @@
     ppsspp
     python3
     ripgrep
+    rustup
     solaar
     spotify
     tree
