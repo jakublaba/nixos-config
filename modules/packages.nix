@@ -13,6 +13,7 @@
     eza
     fastfetch
     filezilla
+    gcc
     gtop
     ghostty
     gitui
