@@ -21,6 +21,7 @@
     mangohud
     nethogs
     obsidian
+    obs-studio
     pciutils
     ppsspp
     python3
