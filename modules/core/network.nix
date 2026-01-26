@@ -16,7 +16,7 @@
 
     # Open ports in the firewall
     firewall = {
-      allowedTCPPorts = [443];
+      allowedTCPPorts = [443 2137];
       # allowedUDPPorts = [ ... ];
 
       # Or disable the firewall altogether
