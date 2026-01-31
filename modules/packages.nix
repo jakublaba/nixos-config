@@ -43,6 +43,7 @@
   hardware.logitech.wireless.enable = true;
 
   programs = {
+    direnv.enable = true;
     firefox.enable = true;
     gamemode.enable = true;
     gnupg.agent = {
