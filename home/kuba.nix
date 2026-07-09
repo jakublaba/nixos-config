@@ -1,4 +1,8 @@
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./modules
   ];
@@ -14,4 +18,13 @@
     cli-tools.enable = true;
     logitech.enable = true;
   };
+
+  home.packages = with pkgs; [
+    discord
+    filezilla
+    obsidian
+    spotify
+    thunderbird
+    zen-browser
+  ];
 }
