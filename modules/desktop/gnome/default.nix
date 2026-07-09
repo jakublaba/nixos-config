@@ -1,14 +1,25 @@
-{pkgs, ...}: {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
+  cfg = config.my.desktop.gnome;
+in {
   imports = [
-    ./apps.nix
+    ./default-apps.nix
     ./extensions.nix
   ];
 
-  services = {
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-  };
+  options.my.desktop.gnome.enable = lib.mkEnableOption "gnome";
 
-  services.gnome.core-apps.enable = false;
-  environment.gnome.excludePackages = [pkgs.gnome-tour];
+  config = lib.mkIf cfg.enable {
+    services = {
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
+    };
+
+    services.gnome.core-apps.enable = false;
+    environment.gnome.excludePackages = [pkgs.gnome-tour];
+  };
 }

@@ -7,6 +7,13 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  my.desktop = {
+    gnome = {
+      enable = true;
+      default-apps.enable = true;
+    };
+  };
+
   my.hardware = {
     audio.enable = true;
     gpu.enable = true;
