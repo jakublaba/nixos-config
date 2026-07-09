@@ -15,6 +15,7 @@
       kando.enable = true;
       solaar.enable = true;
     };
+    ghostty.enable = true;
     cli-tools.enable = true;
     logitech.enable = true;
   };

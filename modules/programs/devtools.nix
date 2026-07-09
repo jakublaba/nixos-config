@@ -17,7 +17,6 @@ in {
       uv
 
       alejandra
-      ghostty
       gitui
     ];
   };
