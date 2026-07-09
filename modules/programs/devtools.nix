@@ -19,13 +19,6 @@ in {
       alejandra
       ghostty
       gitui
-
-      jetbrains.goland
-      jetbrains.idea
-      jetbrains.pycharm
-      jetbrains.rust-rover
-
-      vscode
     ];
   };
 }

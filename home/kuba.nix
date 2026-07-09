@@ -20,11 +20,19 @@
   };
 
   home.packages = with pkgs; [
+    # desktop apps
     discord
     filezilla
     obsidian
     spotify
     thunderbird
     zen-browser
+
+    # editors/ides
+    jetbrains.goland
+    jetbrains.idea
+    jetbrains.pycharm
+    jetbrains.rust-rover
+    vscode
   ];
 }
