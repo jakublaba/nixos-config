@@ -13,21 +13,14 @@ in {
     environment.systemPackages = with pkgs; [
       bat
       btop
-      clinfo
       curl
       eza
       fastfetch
-      filezilla
-      gtop
-      iotop
-      nethogs
       pciutils
       ripgrep
       tree
       vim
-      vulkan-tools
       wget
-      wirelesstools
     ];
   };
 }

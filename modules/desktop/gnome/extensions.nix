@@ -1,20 +1,28 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs.gnomeExtensions; [
-    alphabetical-app-grid
-    appindicator
-    astra-monitor
-    blur-my-shell
-    dock-from-dash
-    gamemode-shell-extension
-    gnome-40-ui-improvements
-    gsconnect
-    removable-drive-menu
-    space-bar
-    upower-battery
-    user-themes
-    wayland-or-x11
-    weekly-commits
-    wifi-qrcode
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.alphabetical-app-grid
+    gnomeExtensions.appindicator
+    gnomeExtensions.astra-monitor
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dock-from-dash
+    gnomeExtensions.gamemode-shell-extension
+    gnomeExtensions.gnome-40-ui-improvements
+    gnomeExtensions.gsconnect
+    gnomeExtensions.removable-drive-menu
+    gnomeExtensions.space-bar
+    gnomeExtensions.upower-battery
+    gnomeExtensions.user-themes
+    gnomeExtensions.wayland-or-x11
+    gnomeExtensions.weekly-commits
+    gnomeExtensions.wifi-qrcode
+
+    # astra-monitor dependencies
+    amdgpu_top
+    clinfo
+    gtop
+    iotop
+    nethogs
+    wirelesstools
   ];
 
   programs.kdeconnect = {
