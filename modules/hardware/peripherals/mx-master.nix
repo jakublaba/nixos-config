@@ -17,8 +17,6 @@ in {
         solaar
         kando
         logiops
-        gnomeExtensions.kando-integration
-        gnomeExtensions.solaar-extension
         xdg-utils
       ];
 

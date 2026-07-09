@@ -8,7 +8,9 @@
     gnomeExtensions.gamemode-shell-extension
     gnomeExtensions.gnome-40-ui-improvements
     gnomeExtensions.gsconnect
+    gnomeExtensions.kando-integration
     gnomeExtensions.removable-drive-menu
+    gnomeExtensions.solaar-extension
     gnomeExtensions.space-bar
     gnomeExtensions.upower-battery
     gnomeExtensions.user-themes
