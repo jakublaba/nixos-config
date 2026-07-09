@@ -18,5 +18,7 @@ in {
       wget
       xdg-utils
     ];
+
+    programs.zsh.enable = true;
   };
 }

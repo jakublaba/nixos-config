@@ -6,6 +6,5 @@
     ./gpg.nix
     ./nix-ld.nix
     ./obs-studio.nix
-    ./zsh.nix
   ];
 }

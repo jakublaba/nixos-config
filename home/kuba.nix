@@ -20,6 +20,7 @@
       nix.enable = true;
       python.enable = true;
       rust.enable = true;
+      zsh.enable = true;
     };
     ghostty.enable = true;
     cli-tools.enable = true;

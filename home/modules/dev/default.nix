@@ -1,8 +1,9 @@
 {
-    imports = [
-        ./git
-        ./nix
-        ./python
-        ./rust
-    ];
+  imports = [
+    ./git.nix
+    ./nix.nix
+    ./python.nix
+    ./rust.nix
+    ./zsh.nix
+  ];
 }

@@ -4,18 +4,18 @@
   config,
   ...
 }: let
-  cfg = config.my.programs.zsh;
+  cfg = config.my.home.dev.zsh;
 in {
-  options.my.programs.zsh.enable = lib.mkEnableOption "zsh config";
+  options.my.home.dev.zsh.enable = lib.mkEnableOption "zsh config";
 
   config = lib.mkIf cfg.enable {
     programs.zsh = {
       enable = true;
 
-      autosuggestions.enable = true;
+      autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
-      ohMyZsh = {
+      oh-my-zsh = {
         enable = true;
         theme = "trapd00r";
 
@@ -34,7 +34,5 @@ in {
         ff = "fastfetch";
       };
     };
-
-    users.defaultUserShell = pkgs.zsh;
   };
 }

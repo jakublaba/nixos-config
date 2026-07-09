@@ -33,6 +33,5 @@
     gpg.enable = true;
     nix-ld.enable = true;
     obs-studio.enable = true;
-    zsh.enable = true;
   };
 }
