@@ -21,6 +21,7 @@ in {
       tree
       vim
       wget
+      xdg-utils
     ];
   };
 }

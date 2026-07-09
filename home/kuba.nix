@@ -12,5 +12,6 @@
       solaar.enable = true;
     };
     cli-tools.enable = true;
+    logitech.enable = true;
   };
 }

@@ -12,13 +12,6 @@ in {
   config = lib.mkIf cfg.enable {
     hardware.logitech.wireless.enable = true;
 
-    environment.systemPackages = with pkgs; [
-      solaar
-      kando
-      logiops
-      xdg-utils
-    ];
-
     environment.etc."logid.cfg".source = ./logid.cfg;
 
     systemd.services.logiops = {
