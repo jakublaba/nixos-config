@@ -18,7 +18,10 @@
     audio.enable = true;
     gpu.enable = true;
     overclocking.enable = true;
-    virtualization.enable = true;
+    virtualization = {
+      enable = true;
+      users = ["kuba"];
+    };
 
     mx-master.enable = true;
   };
