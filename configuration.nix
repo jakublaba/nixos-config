@@ -28,10 +28,8 @@
 
   my.programs = {
     common.enable = true;
-    devtools.enable = true;
     direnv.enable = true;
     gaming.enable = true;
-    git.enable = true;
     gpg.enable = true;
     nix-ld.enable = true;
     obs-studio.enable = true;

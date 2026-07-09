@@ -3,15 +3,15 @@
   config,
   ...
 }: let
-  cfg = config.my.programs.git;
+  cfg = config.my.home.dev.git;
 in {
-  options.my.programs.git.enable = lib.mkEnableOption "git config";
+  options.my.home.dev.git.enable = lib.mkEnableOption "git config";
 
   config = lib.mkIf cfg.enable {
     programs.git = {
       enable = true;
 
-      config = {
+      settings = {
         user = {
           name = "jakublaba";
           email = "jakub.maciej.laba@gmail.com";

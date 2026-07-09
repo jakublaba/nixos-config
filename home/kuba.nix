@@ -15,6 +15,12 @@
       kando.enable = true;
       solaar.enable = true;
     };
+    dev = {
+      git.enable = true;
+      nix.enable = true;
+      python.enable = true;
+      rust.enable = true;
+    };
     ghostty.enable = true;
     cli-tools.enable = true;
     logitech.enable = true;

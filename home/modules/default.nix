@@ -1,6 +1,7 @@
 {
   imports = [
     ./autostart
+    ./dev
     ./ghostty
 
     ./cli-tools.nix
