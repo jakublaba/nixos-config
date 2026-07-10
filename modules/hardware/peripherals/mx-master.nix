@@ -6,68 +6,60 @@
 }: let
   cfg = config.my.hardware.mx-master;
 in {
-  options.my.hardware.mx-master.enable =
-    lib.mkEnableOption "mx master 4 config";
+  options.my.hardware.mx-master.enable = lib.mkEnableOption "mx master 4 config";
 
-  config = lib.mkIf cfg.enable {
-    hardware.logitech.wireless.enable = true;
+  config =
+    lib.mkIf cfg.enable
+    {
+      hardware.logitech.wireless.enable = true;
 
-    environment.etc."logid.cfg".source = ./logid.cfg;
-
-    systemd.services.logiops = {
-      description = "Logitech HID++ configuration daemon";
-
-      wantedBy = [
-        "multi-user.target"
+      environment.systemPackages = with pkgs; [
+        solaar
+        kando
+        logiops
+        xdg-utils
       ];
 
-      serviceConfig = {
-        Type = "simple";
+      services.udev.extraRules = ''
+        ACTION=="add", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="046d", ENV{ID_MODEL_ID}=="c548", \
+        TAG+="systemd", ENV{SYSTEMD_WANTS}+="logiops-restart.service"
+      '';
 
-        ExecStart = "${pkgs.logiops}/bin/logid -c /etc/logid.cfg";
+      systemd.services.logiops-restart = {
+        description = "Restart logiops after mouse reconnect to reload config";
 
-        Restart = "always";
-        RestartSec = "2s";
+        serviceConfig = {
+          Type = "oneshot";
+          ExecStart = "${pkgs.systemd}/bin/systemctl restart logiops.service";
+        };
       };
-    };
 
-    # hacky and ugly but idk what else to do
-    # logiops seems to load config too early on mouse wake so only restart helps
-    # note: this doesn't work on bolt receiver replug, only on mouse restart (turn off and on)
-    # after replugging the bolt receiver, you have to manually restart the mouse for config to load
-    systemd.services.logiops-wakeup-monitor = {
-      description = "Restart logiops after Logitech mouse wake";
+      systemd.services.logiops = {
+        description = "Logitech Configuration Daemon";
 
-      wantedBy = [
-        "multi-user.target"
-      ];
+        wantedBy = ["multi-user.target"];
 
-      after = [
-        "logiops.service"
-      ];
+        after = [
+          "systemd-udevd.service"
+          "dbus.service"
+        ];
 
-      requires = [
-        "logiops.service"
-      ];
+        wants = [
+          "systemd-udevd.service"
+          "dbus.service"
+        ];
 
-      serviceConfig = {
-        Type = "simple";
+        serviceConfig = {
+          Type = "simple";
+          ExecStart = "${pkgs.logiops}/bin/logid";
 
-        ExecStart = pkgs.writeShellScript "logiops-wakeup-monitor" ''
-          ${pkgs.systemd}/bin/journalctl \
-            -fu logiops.service \
-            -o cat |
-          while read line; do
-            if echo "$line" | grep -q "woke up"; then
-              sleep 1
-              ${pkgs.systemd}/bin/systemctl restart logiops.service
-            fi
-          done
-        '';
+          Restart = "always";
+          RestartSec = "1s";
 
-        Restart = "always";
-        RestartSec = "5s";
+          User = "root";
+        };
       };
+
+      environment.etc."logid.cfg".source = ./logid.cfg;
     };
-  };
 }
