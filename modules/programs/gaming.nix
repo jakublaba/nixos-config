@@ -2,9 +2,14 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }: let
   cfg = config.my.programs.gaming;
+  pkgs-unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
 in {
   options.my.programs.gaming.enable = lib.mkEnableOption "steam + mangohud mostly";
 
@@ -22,7 +27,7 @@ in {
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
 
-      extraCompatPackages = with pkgs; [
+      extraCompatPackages = with pkgs-unstable; [
         proton-ge-bin
       ];
     };
