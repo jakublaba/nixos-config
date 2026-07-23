@@ -15,6 +15,7 @@ in {
       Exec=corectrl --minimize-systray
       Icon=corectrl
       Terminal=false
+      StartupNotify=false
     '';
   };
 }

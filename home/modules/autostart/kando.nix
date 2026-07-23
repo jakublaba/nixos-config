@@ -15,6 +15,7 @@ in {
       Exec=kando
       Icon=kando
       Terminal=false
+      StartupNotify=False
     '';
   };
 }

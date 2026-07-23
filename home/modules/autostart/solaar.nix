@@ -15,6 +15,7 @@ in {
       Exec=solaar --window=hide
       Icon=solaar
       Terminal=false
+      StartupNotify=false
     '';
   };
 }
