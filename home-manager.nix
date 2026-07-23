@@ -1,5 +1,10 @@
-{
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  home-manager.users.kuba = import ./home/kuba.nix;
+{inputs, ...}: {
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+    users.kuba = import ./home/kuba.nix;
+  };
 }
